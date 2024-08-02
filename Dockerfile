@@ -70,4 +70,8 @@ COPY --from=build-stage /1brc/data/ data/
 COPY --from=build-stage /1brc/1brc* ./
 COPY test.sh ./
 
-CMD ["sh", "-c", "FORCE_CONTINUE=true", "./test.sh"]
+# Install bash and diffutils
+RUN apk add --no-cache bash diffutils
+
+ENV FORCE_CONTINUE=true
+CMD ["./test.sh"]

@@ -5,7 +5,7 @@ default: all
 
 ## default: Runs tests and benchmarks
 .PHONY: default
-all: test
+all: build test
 
 
 
@@ -33,7 +33,7 @@ clean:
 ## build: build the binary
 .PHONY: build
 build:
-	@docker build -t ${BIN} .
+	docker build -t ${BIN} .
 
 
 
@@ -41,4 +41,4 @@ build:
 ## test: Test and benchmark
 .PHONY: test
 test:
-	@docker run ${BIN}
+	docker run ${BIN}
