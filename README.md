@@ -2,6 +2,8 @@
 
 Just me having some fun and giving this a `Go`.
 
+![](./assets/bench.jpg)
+
 ## Challenge
 
 The text file contains temperature values for a range of weather stations.
