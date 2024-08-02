@@ -1,0 +1,6 @@
+# Force LF on text files since that's the expected on linux and Java implementations only support that.
+*.* text eol=lf
+*.txt text eol=lf
+*.out text eol=lf
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.7z.00* filter=lfs diff=lfs merge=lfs -text
